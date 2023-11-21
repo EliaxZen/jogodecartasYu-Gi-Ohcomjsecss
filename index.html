@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yu-Gi-Oh Jo-ken-po Edition</title>
+
+  <!-- Links CSS -->
+  <link rel="stylesheet" href="src/CSS/reset.css">
+  <link rel="stylesheet" href="src/CSS/base.css">
+  <link rel="stylesheet" href="src/CSS/buttons.css">
+  <link rel="stylesheet" href="src/CSS/containers_and_frames.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <audio id="bgm" loop>
+    <source src="./src/assets/audio/src_assets_audios_egyptian_duel.mp3" type="audio/mp3" />
+  </audio>
+
+
+  <div class="bg-video">
+    <video class="video" autoplay loop muted>
+      <source src="./src/assets/video/yugi.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="container">
+    <div class="container__left framed-golden-2">
+      <div class="score_box framed">
+        <span id="score_points">Win : 0 | Lose : 0</span>
+      </div>
+      <div class="menu_avatar">
+        <img id="card-image">
+      </div>
+      <div class="card_details framed">
+        <p id="card-name">Selecionar</p>
+        <p id="card-type">Carta</p>
+      </div>
+    </div>
+
+    <div class="container__right">
+      <div class="card-box__container">
+        <div class="card-box framed" id="computer-cards">
+
+        </div>
+        <div class="card-versus__container">
+          <div class="versus-top">
+            <div class="card-infield">
+              <img id="player-field-card" height="180px" width="125px">
+            </div>
+            <img height="100px" src="src/assets/images/millenium2.png">
+            <div class="card-infield">
+              <img id="computer-field-card" height="180px" width="125px">
+            </div>
+          </div>
+          <div class="versus-bottom">
+            <button id="next-duel" class="rpgui-button" onclick="resetDuel()">Ganhou</button>
+          </div>
+        </div>
+        <div class="card-box framed" id="player-cards">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link JavaScript -->
+  <script src="src/JS/engine.js" defer></script>
+</body>
+
+</html>
